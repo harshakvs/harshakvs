@@ -4,7 +4,7 @@ I'm a Senior Machine Learning Engineer focused on building real-world AI systems
 
 🚀 **What I work on**:
 - Action recognition in surveillance (VideoMAE, X3D, SlowFast)
-- Abuse detection systems using Whisper + LLMs (Microsoft Phi)
+- Abuse detection systems using Whisper + LLMs 
 - End-to-end ML pipelines with Docker, Kubernetes, GitLab CI/CD, and ArgoCD
 - Cloud + Edge AI deployments using AWS (EKS, Lambda, S3), MinIO, and RabbitMQ
 
