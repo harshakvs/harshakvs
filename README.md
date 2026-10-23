@@ -8,20 +8,7 @@ I take AI systems from prototype to production: vision-language models, real-tim
 
 ### What I built at work
 
-```mermaid
-flowchart LR
-    CAM["🎥 600+ cameras"] --> POSE["Edge GPU<br/>YOLO-Pose · FP16"]
-    POSE -- "fall candidate" --> GRID["6 frames → 1 grid image"]
-    GRID --> EQ["Qwen-VL on edge · FP16<br/>fall / normal"]
-    EQ --> ALERT1["🚨 Fall alert<br/>under 2s"]
-    CAM --> ANOM["Edge anomaly model"]
-    ANOM -- "flagged clip" --> Q["Cloud queue<br/>10s clip → 3s snippets"]
-    Q --> FAST["Fast check<br/>Qwen-VL on vLLM"]
-    FAST -- "anomaly" --> DET["Detailed analysis<br/>flags + description"]
-    DET --> ALERT2["🚨 Alert to staff<br/>record → alert in 5–6s"]
-    FAST -. traces .-> LF["Langfuse"]
-    DET -. traces .-> LF
-```
+<img src="assets/pipeline.svg" alt="Real-time safety pipeline: an edge fall route (YOLO-Pose, frame grid, Qwen-VL FP16, alert under 2s) and a cloud anomaly route (queue of 3s snippets, fast check and detailed analysis with Qwen-VL on vLLM, alert in 5–6s), traced in Langfuse" width="100%">
 
 | | |
 |---|---|
