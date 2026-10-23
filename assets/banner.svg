@@ -2,14 +2,14 @@
   <style>
     .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
     .sans { font-family: Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
-    .l { opacity: 0; animation: in .5s ease forwards; }
+    .l { animation: in .5s ease backwards; }
     .l1 { animation-delay: .2s } .l2 { animation-delay: .9s } .l3 { animation-delay: 1.6s } .l4 { animation-delay: 2.3s }
     .cur { animation: blink 1s steps(1) infinite; }
     .node { animation: pulse 3s ease-in-out infinite; }
     @keyframes in { from { opacity: 0; transform: translateY(4px) } to { opacity: 1; transform: none } }
     @keyframes blink { 50% { opacity: 0 } }
     @keyframes pulse { 50% { opacity: .25 } }
-    @media (prefers-reduced-motion: reduce) { .l { animation: none; opacity: 1 } .cur, .node { animation: none } }
+    @media (prefers-reduced-motion: reduce) { .l, .cur, .node { animation: none } }
   </style>
   <rect width="1200" height="300" rx="16" fill="#0b111b"/>
   <rect x="0.75" y="0.75" width="1198.5" height="298.5" rx="15.5" fill="none" stroke="#1e2c40" stroke-width="1.5"/>
