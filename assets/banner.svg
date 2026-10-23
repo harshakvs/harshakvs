@@ -37,5 +37,5 @@
   <text x="44" y="100" class="mono l l1" font-size="22" fill="#e6edf3"><tspan fill="#4ef0c3">$</tspan> whoami</text>
   <text x="44" y="146" class="sans l l2" font-size="40" font-weight="700" fill="#e6edf3">Sreeharsha <tspan fill="#4ef0c3">Kotta</tspan></text>
   <text x="44" y="190" class="mono l l3" font-size="18" fill="#9aa8bb">ML engineer · production VLMs · vLLM serving · real-time video AI</text>
-  <text x="44" y="240" class="mono l l4" font-size="17" fill="#7cc4ff">600+ cameras  ·  95% precision / 92% recall  ·  record → alert in 5–6s<tspan class="cur" fill="#4ef0c3"> █</tspan></text>
+  <text x="44" y="240" class="mono l l4" font-size="17" fill="#7cc4ff">600+ cameras  ·  95% precision / 92% recall  ·  alerts in 4–5s<tspan class="cur" fill="#4ef0c3"> █</tspan></text>
 </svg>

@@ -8,23 +8,15 @@ I take AI systems from prototype to production: vision-language models, real-tim
 
 ### What I built at work
 
-<img src="assets/pipeline.svg" alt="Real-time safety pipeline: an edge fall route (YOLO-Pose, frame grid, Qwen-VL FP16, alert under 2s) and a cloud anomaly route (queue of 3s snippets, fast check and detailed analysis with Qwen-VL on vLLM, alert in 5–6s), traced in Langfuse" width="100%">
+A real-time video understanding system: video processing plus a multi-model pipeline (pose models and vision-language models) running across edge and cloud GPUs, with the MLOps and infrastructure to keep it running at every site.
 
 | | |
 |---|---|
-| **95%+ precision / 92% recall** | in production, video + audio labels, tracked on live dashboards at every site |
+| **95%+ precision / 92% recall** | in production, video + audio, tracked on live dashboards at every site |
+| **4–5s** | from event to alert reaching staff |
 | **~9,000 → 1–2** | video segments per camera per day, down to actionable alerts |
-| **6–7s → <2s** | edge latency at 25 FPS (FP16, pose batching, frame sampling) |
-| **~20s → 5–6s** | record-to-alert after moving cloud VLMs to vLLM with cross-camera batching |
-| **6–7 hrs → <30 min** | site onboarding, with CI/CD and GitOps built from scratch |
-
-### Field notes from production
-
-- **An image VLM can see time if you tile it.** Six evenly spaced frames in one grid image gave Qwen-VL enough temporal context for falls, with no video model needed.
-- **The fastest token is the one you don't generate.** Dropping the scene description from the alert path saved 1–2s per alert.
-- **Cascades beat bigger models.** Cheap pose detection decides *when* to call the expensive VLM, and a fast check decides when to run the detailed one.
-- **False alarms are a failure mode too.** If staff learn to ignore alerts, recall stops mattering. We tuned for both.
-- **Not every optimization survives production.** FP32 → FP16 was a clear win. Quantizing further didn't hold up, so FP16 stayed.
+| **6–7s → <2s** | edge inference latency at 25 FPS |
+| **6–7 hrs → <30 min** | to onboard a new site |
 
 ### Building in public
 
