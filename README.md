@@ -1,21 +1,30 @@
-### 👋 Hi, I'm Sreeharsha Venkata Sai Kotta
+## Hi, I'm Sreeharsha 👋
 
-I'm a Senior Machine Learning Engineer focused on building real-world AI systems that bridge video, language, and cloud infrastructure.
+ML engineer who takes AI systems from prototype to production: vision-language models, real-time video pipelines, and the GPU serving and infrastructure underneath them.
 
-🚀 **What I work on**:
-- Action recognition in surveillance (VideoMAE, X3D, SlowFast)
-- Abuse detection systems using Whisper + LLMs 
-- End-to-end ML pipelines with Docker, Kubernetes, GitLab CI/CD, and ArgoCD
-- Cloud + Edge AI deployments using AWS (EKS, Lambda, S3), MinIO, and RabbitMQ
+**Now:** first ML engineer at an early-stage startup, where I built and own a real-time safety-monitoring platform for daycares and elder-care homes, running on **600+ cameras** and **100+ edge devices**.
 
-🎓 **Education**:
-- MS in Data Science & Analytics, Georgia State University (GPA: 4.0)
-- BTech in Computer Science & Engineering, Shiv Nadar University
+- **Pose → VLM cascade:** YOLO-Pose flags candidate events, then frames tiled into a grid let **Qwen-VL** reason over time
+- **Serving:** open-source VLMs on **vLLM**, batched across cameras, with record-to-alert in **5–6s**
+- **Quality:** **95%+ precision / 92% recall** in production, tracked live across every site
+- **Edge:** FP16, batching and frame sampling cut latency from **6–7s to <2s** at 25 FPS
+- **Everything around it:** Langfuse tracing, SageMaker retraining loops, and CI/CD built from scratch (GitLab runners, Trivy, Renovate, ArgoCD across edge + dev/test/prod EKS)
 
-🛠️ **Languages & Tools**: Python, PyTorch, TensorFlow, HuggingFace, OpenCV, Transformers, SQL, Spark, Azure, AWS, Git, VS Code
+**Before:** Data Scientist at **HP**, building demand forecasting on Databricks/PySpark that drove **$26M** in savings. M.S. in Analytics from Georgia State (4.0 GPA).
 
-📈 Projects include AI-driven video summarization, time-series forecasting, LLM-based NLP analysis, and fraud detection.
+### Building in public
 
-🌱 Currently exploring: TinyML for edge devices, multimodal deep learning, and LLM compression techniques.
+| Project | What it is |
+|---|---|
+| [**CardPilot**](https://github.com/harshakvs/cardpilot) | Multi-agent credit-card optimizer: local ↔ cloud model router (Ollama ↔ Claude), pgvector RAG, tool use, Logfire tracing |
+| [**my-portfolio**](https://github.com/harshakvs/my-portfolio) | My site, built with Astro: an in-browser resume chatbot, a gradient descent game, and write-ups |
 
-Let's build something impactful together.
+### Stack
+
+`PyTorch` `vLLM` `Hugging Face` `Qwen-VL` `YOLO` `OpenCV` `Langfuse` · `Kubernetes` `ArgoCD` `Helm` `GitLab CI` `Docker` · `AWS` `SageMaker` `Databricks` `PySpark` · `Python` `SQL`
+
+### Find me
+
+[Portfolio](https://harshakvs.github.io/my-portfolio/) · [LinkedIn](https://www.linkedin.com/in/sreeharsha-kvs) · [Resume](https://harshakvs.github.io/my-portfolio/Resume_Sreeharsha_Kotta.pdf) · sreeharshakotta@gmail.com
+
+Open to **AI Engineer** and **ML Engineer** roles.
